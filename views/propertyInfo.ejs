@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nechal Home Agency - Property Information</title>
+  <meta name="description" content="Discover detailed information about our properties at Nechal Home Agency. Browse specifications, features, and photos to find the perfect home or commercial space that suits your needs.">
+  <%- include("../common/config.ejs") %>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="font-montserrat">
+  <header class=" max-w-[1300px] mx-auto">
+    <nav class="flex justify-between px-5 py4 border-b border-gray-200 items-center">
+      <div>
+        <img class="w-[15vw]" src="/imgs/find/logo.svg" alt="">
+      </div>
+      <div class="flex gap-3">
+        <img class="xs:w-[3vw] md:w-[2vw]" src="/imgs/find/hotline-icon.svg" alt="">
+        <div>
+          <p class="xs:text-[1.8vw] md:text-[1.2vw]">to more Inquiry</p>
+          <h2 class="xs:text-[1.8vw] md:text-[1.2vw] text-dgolden">+922 354802 259</h2>
+        </div>
+      </div>
+    </nav>
+    <nav class="flex justify-between px-6 py-[2vw] items-center">
+      <a class="xs:text-[2vw] md:text-[1.6vw]" href="/home">Home</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/forSale">For Sale</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/forRent">For Rent</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/properties">Property</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="#">Contact us</a>
+      <a id="addP" href="/addProperty" class="flex relative gap-2 xs:px-3 md:px-5 bg-black rounded-lg xs:py-[1vw] md:py-[0.7vw] text-black hover:text-white items-center transition-all duration-500 fill-black hover:fill-white font-semibold overflow-hidden">
+        <svg class="relative z-10 w-[2vw]" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <g mask="url(#mask0_485_1352)">
+            <path d="M17.0989 15.5563C17.0993 15.5432 17.0995 15.5302 17.0995 15.5172C17.0992 15.1881 16.9726 14.8726 16.7477 14.6399C16.5227 14.4071 16.2177 14.2762 15.8996 14.2759V8.53448L16.9795 7.69655C17.0171 7.66745 17.0474 7.62965 17.0683 7.5862C17.0891 7.54275 17.0998 7.49485 17.0995 7.44635C17.0992 7.39785 17.088 7.35009 17.0666 7.30691C17.0452 7.26373 17.0144 7.22633 16.9765 7.19771L14.3997 5.24956V1.86207C14.4793 1.86207 14.5556 1.82937 14.6118 1.77117C14.6681 1.71297 14.6997 1.63403 14.6997 1.55172V0.310345C14.6997 0.228036 14.6681 0.149099 14.6118 0.0908979C14.5556 0.0326969 14.4793 0 14.3997 0H11.3999C11.3203 0 11.244 0.0326969 11.1877 0.0908979C11.1315 0.149099 11.0999 0.228036 11.0999 0.310345V1.55172C11.0999 1.63403 11.1315 1.71297 11.1877 1.77117C11.244 1.82937 11.3203 1.86207 11.3999 1.86207V2.98168L9.17699 1.30116C9.12561 1.26232 9.06363 1.24139 9 1.24139C8.93637 1.24139 8.87439 1.26232 8.82301 1.30116L1.02345 7.19771C0.985599 7.22633 0.954756 7.26373 0.933399 7.30691C0.912041 7.35009 0.900764 7.39785 0.900472 7.44635C0.900181 7.49485 0.910882 7.54275 0.931719 7.5862C0.952556 7.62965 0.982947 7.66745 1.02045 7.69655L2.10039 8.53448V14.2759C1.78226 14.2762 1.47726 14.4071 1.25231 14.6399C1.02735 14.8726 0.900818 15.1881 0.900461 15.5172C0.900461 15.5302 0.900686 15.5432 0.901136 15.5563C0.618136 15.6316 0.371411 15.8111 0.207254 16.0612C0.0430969 16.3113 -0.027211 16.6148 0.00952183 16.9147C0.0462547 17.2146 0.187504 17.4903 0.406767 17.6901C0.626031 17.8899 0.908239 18.0001 1.20044 18H16.7996C17.0918 18.0001 17.374 17.8899 17.5932 17.6901C17.8125 17.4903 17.9537 17.2146 17.9905 16.9147C18.0272 16.6148 17.9569 16.3113 17.7927 16.0612C17.6286 15.8111 17.3819 15.6316 17.0989 15.5563ZM11.6998 0.62069H14.0997V1.24138H11.6998V0.62069ZM11.9998 3.41379V1.86207H13.7997V4.79599L11.9714 3.41379H11.9998ZM9 1.93609L16.2954 7.45153L15.5969 7.99351L9.17647 3.1628C9.12519 3.12421 9.06341 3.10343 9 3.10343C8.93659 3.10343 8.87481 3.12421 8.82353 3.1628L2.40311 7.99351L1.7046 7.45153L9 1.93609ZM0.600478 16.7586C0.600644 16.5957 0.662678 16.4393 0.773215 16.3232C0.883752 16.2071 1.03395 16.1406 1.19144 16.1379H1.19216C1.20749 16.1401 1.22283 16.142 1.23847 16.1431C1.28818 16.1463 1.33789 16.1367 1.38311 16.1151C1.42833 16.0935 1.46765 16.0606 1.4975 16.0194C1.52735 15.9781 1.54681 15.9298 1.55411 15.8788C1.56141 15.8279 1.55632 15.7758 1.53931 15.7274C1.51449 15.6603 1.50132 15.5891 1.50043 15.5172C1.50062 15.3527 1.56389 15.1949 1.67636 15.0786C1.78884 14.9622 1.94133 14.8967 2.10039 14.8966V17.3793H1.20044C1.04138 17.3791 0.888887 17.3137 0.776412 17.1973C0.663938 17.0809 0.600666 16.9232 0.600478 16.7586ZM13.4997 17.3793H9.89995V10.5517H13.4997V17.3793ZM14.0997 17.3793V10.2414C14.0997 10.1591 14.0681 10.0801 14.0118 10.0219C13.9556 9.96373 13.8793 9.93103 13.7997 9.93103H9.59997C9.5204 9.93103 9.4441 9.96373 9.38785 10.0219C9.33159 10.0801 9.29998 10.1591 9.29998 10.2414V17.3793H2.70036V8.53735L9 3.79753L15.2996 8.53735V17.3793H14.0997ZM16.7996 17.3793H15.8996V14.8966C16.0587 14.8967 16.2112 14.9622 16.3236 15.0786C16.4361 15.1949 16.4994 15.3527 16.4996 15.5172C16.4987 15.5892 16.4855 15.6604 16.4607 15.7275C16.4437 15.776 16.4386 15.828 16.4459 15.879C16.4532 15.93 16.4726 15.9783 16.5025 16.0195C16.5324 16.0608 16.5717 16.0937 16.6169 16.1153C16.6621 16.1369 16.7118 16.1465 16.7615 16.1432C16.7772 16.1422 16.7925 16.1403 16.8078 16.1381H16.8086C16.9677 16.1393 17.1198 16.2059 17.2315 16.3232C17.3431 16.4404 17.4052 16.5988 17.404 16.7634C17.4028 16.928 17.3385 17.0854 17.2251 17.201C17.1118 17.3165 16.9587 17.3807 16.7996 17.3795V17.3793Z"></path>
+            <path d="M7.79919 9.93164H4.1994C4.11984 9.93164 4.04353 9.96434 3.98728 10.0225C3.93102 10.0807 3.89941 10.1597 3.89941 10.242V14.5868C3.89941 14.6691 3.93102 14.7481 3.98728 14.8063C4.04353 14.8645 4.11984 14.8972 4.1994 14.8972H7.79919C7.87875 14.8972 7.95505 14.8645 8.01131 14.8063C8.06757 14.7481 8.09917 14.6691 8.09917 14.5868V10.242C8.09917 10.1597 8.06757 10.0807 8.01131 10.0225C7.95505 9.96434 7.87875 9.93164 7.79919 9.93164ZM7.49921 12.1041H6.29928V10.5523H7.49921V12.1041ZM5.69931 10.5523V12.1041H4.49938V10.5523H5.69931ZM4.49938 12.7247H5.69931V14.2765H4.49938V12.7247ZM6.29928 14.2765V12.7247H7.49921V14.2765H6.29928Z"></path>
+            <path d="M11.0783 13.774C11.1417 13.6157 11.069 13.4342 10.9159 13.3686C10.7629 13.303 10.5874 13.3782 10.524 13.5365C10.4606 13.6949 10.5333 13.8764 10.6863 13.942C10.8394 14.0076 11.0149 13.9324 11.0783 13.774Z"></path>
+          </g>
+        </svg>
+        <span class="relative xs:text-[2vw] md:text-[1.3vw] z-10">Add Property</span>
+      </a>
+    </nav>
+  </header>
+  <section>
+    <div class="max-w-[1300px] mx-auto">
+      <div class="w-full h-[25vw]">
+        <img class="w-full h-full object-cover object-center" src="<%= propertyData.image.imgFilepath %>" alt="<%= propertyData.image.imgFilename %>">
+      </div>
+      <div class="grid lg:grid-cols-3 place-items-center py-10 xs:px-3 lg:px-16 gap-8">
+        <div class="lg:col-span-2">
+          <div class="flex gap-5 items-center">
+            <h3 class="md:text-[2.5vw] xs:text-[4.5vw] font-semibold"><%= propertyData.currency + propertyData.price %></h3>
+            <span class="md:p-1 md:text-md xs:text-sm px-3 bg-dgolden rounded-md "><%= propertyData.PropertyStatus %></span>
+          </div>
+          <h1 class="font-bold xs:text-[6.5vw] md:text-[3.5vw] py-2"><%= propertyData.propertyName %></h1>
+          <div class="flex items-center md:text-md xs:text-sm gap-8">
+            <h3 class="flex gap-2 items-center font-semibold text-gray-500"><i class="fa-solid fa-location-dot"></i><%= propertyData.city %> city</h3>
+            <h3 class="py-1 px-10 bg-gray-200 rounded-full "><%= propertyData.propertyType %></h3>
+          </div>
+          <div class="my-5 py-3 border-y border-gray-200 flex justify-between flex-wrap">
+            <div>
+              <h3 class="text-gray-500 font-semibold"><span class="text-black">Apartment Type</span> (<%= propertyData.propertyType%>)</h3>
+            </div>
+            <div class=" flex gap-3 items-center flex-wrap">
+              <div class="flex gap-2 items-center">
+                <img src="/imgs/propertiesInfo/bed2.svg" alt="">
+                <h3><%= propertyData.bedrooms %> beds</h3>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="/imgs/propertiesInfo/bath2.svg" alt="">
+                <h3><%= propertyData.bathrooms%> baths</h3>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="/imgs/propertiesInfo/size2.svg" alt="">
+                <h3><%= propertyData.belconey %> belcony</h3>
+              </div>
+            </div>
+          </div>
+          <div class="py-16 ">
+            <h2 class="md:text-[1.7vw] xs:text-[5.8vw] font-semibold tracking-wide">Description</h2>
+            <p class="pt-5 text-gray-500 font-medium leading-[33px]"><%= propertyData.discription %></p>
+          </div>
+          <div class="py-5">
+            <h2 class="md:text-[1.7vw] xs:text-[5.8vw] font-semibold tracking-wide">Property Details</h2>
+            <div class="grid  md:grid-cols-4  xs:grid-cols-2 pt-7 gap-5">
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/bed.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.bedrooms %></h3>
+                  <h3 class="text-gray-500">Beds</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/bath2.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.bathrooms%></h3>
+                  <h3 class="text-gray-500">Baths</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/size2.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.aria %></h3>
+                  <h3 class="text-gray-500"><%= propertyData.unit %></h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/garage.svg" alt="">
+                </div>
+                <div>
+                  <h3>02</h3>
+                  <h3 class="text-gray-500"><%= propertyData.otherFeatures[7] %></h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/bed.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.PropertyStatus %></h3>
+                  <h3 class="text-gray-500">Status</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/build-year.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.buitlYear %></h3>
+                  <h3 class="text-gray-500">Year Built</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/dimension.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.dimensions %></h3>
+                  <h3 class="text-gray-500">Dimensions</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/bed.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.bedrooms %></h3>
+                  <h3 class="text-gray-500">Beds</h3>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-[50px] rounded-md flex items-center justify-center h-[50px] p-2 border-2 border-gray-300">
+                  <img class="w-full h-full" src="/imgs/propertiesInfo/bed.svg" alt="">
+                </div>
+                <div>
+                  <h3><%= propertyData.currency %><%= propertyData.price %></h3>
+                  <h3 class="text-gray-500">price</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-5">
+            <h2 class="md:text-[1.7vw] xs:text-[5.8vw] mb-3 font-semibold tracking-wide">Key Features</h2>
+            <div class="grid lg:grid-cols-3 xs:grid-cols-2 gap-2">
+              <% propertyData.otherFeatures.forEach((items) => {%>
+              <div class="flex xs:gap-2 md:gap-8 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                  <path d="M6 11.25C4.60761 11.25 3.27226 10.6969 2.28769 9.71231C1.30312 8.72774 0.75 7.39239 0.75 6C0.75 4.60761 1.30312 3.27226 2.28769 2.28769C3.27226 1.30312 4.60761 0.75 6 0.75C7.39239 0.75 8.72774 1.30312 9.71231 2.28769C10.6969 3.27226 11.25 4.60761 11.25 6C11.25 7.39239 10.6969 8.72774 9.71231 9.71231C8.72774 10.6969 7.39239 11.25 6 11.25ZM6 12C7.5913 12 9.11742 11.3679 10.2426 10.2426C11.3679 9.11742 12 7.5913 12 6C12 4.4087 11.3679 2.88258 10.2426 1.75736C9.11742 0.632141 7.5913 0 6 0C4.4087 0 2.88258 0.632141 1.75736 1.75736C0.632141 2.88258 0 4.4087 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.88258 11.3679 4.4087 12 6 12Z"></path>
+                  <path d="M8.22751 3.72747C8.22217 3.73264 8.21716 3.73816 8.21251 3.74397L5.60776 7.06272L4.03801 5.49222C3.93138 5.39286 3.79034 5.33876 3.64462 5.34134C3.49889 5.34391 3.35985 5.40294 3.25679 5.506C3.15373 5.60906 3.0947 5.7481 3.09213 5.89382C3.08956 6.03955 3.14365 6.18059 3.24301 6.28722L5.22751 8.27247C5.28097 8.32583 5.34463 8.36788 5.4147 8.39611C5.48476 8.42433 5.5598 8.43816 5.63532 8.43676C5.71084 8.43536 5.78531 8.41876 5.85428 8.38796C5.92325 8.35716 5.98531 8.31278 6.03676 8.25747L9.03076 4.51497C9.13271 4.40796 9.18845 4.26514 9.18593 4.11737C9.18341 3.9696 9.12284 3.82875 9.0173 3.72529C8.91177 3.62182 8.76975 3.56405 8.62196 3.56446C8.47417 3.56486 8.33247 3.62342 8.22751 3.72747Z"></path>
+                </svg>
+                <h3><%= items %></h3>
+              </div>
+              <%})%>
+            </div>
+          </div>
+        </div>
+        <div class="py-10 flex flex-col gap-8">
+          <div class="w-full bg-[#F6EFF7] flex-col gap-1 items-center py-8 px-5 rounded-lg flex justify-center">
+            <img class="w-[150px] h-[150px] object-cover object-top rounded-full" src="<%= propertyData.profileImage.proImgfilepath %>" alt="<%= propertyData.profileImage.proImgfilename %>">
+            <h3 class="text-lg font-semibold"><%= propertyData.fullName %></h3>
+            <h4 class="text-gray-500 font-medium text-sm pb-3 "><%= propertyData.desination %></h4>
+            <div class="w-full h-1 mb-2 bg-dgolden rounded-[50%]"></div>
+            <a class="transition-all duration-500 hover:text-dgolden" href="#">View Listing</a>
+            <div class="my-8 bg-white w-full p-5 flex flex-col gap-2 rounded-lg">
+              <a href="https://wa.me/<%= propertyData.phoneNum %>" class="flex gap-3 items-center">
+                <i class="bx bxl-whatsapp text-3xl text-[#00D277]"></i>
+                <p><%= propertyData.phoneNum %></p>
+              </a>
+              <div class="flex gap-3 items-center">
+                <i class="bx bx-at text-3xl text-[#F44336]"></i>
+                <p><%= propertyData.email %></p>
+              </div>
+            </div>
+            <a id="addP" href="#" class="flex relative gap-2 xs:px-3 md:px-5 bg-black rounded-lg xs:py-[1vw] md:py-[0.7vw] text-black hover:text-white items-center transition-all duration-500 fill-black hover:fill-white font-semibold overflow-hidden">
+              <svg class="relative z-10 w-[2vw]" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <g mask="url(#mask0_485_1352)">
+                  <path d="M17.0989 15.5563C17.0993 15.5432 17.0995 15.5302 17.0995 15.5172C17.0992 15.1881 16.9726 14.8726 16.7477 14.6399C16.5227 14.4071 16.2177 14.2762 15.8996 14.2759V8.53448L16.9795 7.69655C17.0171 7.66745 17.0474 7.62965 17.0683 7.5862C17.0891 7.54275 17.0998 7.49485 17.0995 7.44635C17.0992 7.39785 17.088 7.35009 17.0666 7.30691C17.0452 7.26373 17.0144 7.22633 16.9765 7.19771L14.3997 5.24956V1.86207C14.4793 1.86207 14.5556 1.82937 14.6118 1.77117C14.6681 1.71297 14.6997 1.63403 14.6997 1.55172V0.310345C14.6997 0.228036 14.6681 0.149099 14.6118 0.0908979C14.5556 0.0326969 14.4793 0 14.3997 0H11.3999C11.3203 0 11.244 0.0326969 11.1877 0.0908979C11.1315 0.149099 11.0999 0.228036 11.0999 0.310345V1.55172C11.0999 1.63403 11.1315 1.71297 11.1877 1.77117C11.244 1.82937 11.3203 1.86207 11.3999 1.86207V2.98168L9.17699 1.30116C9.12561 1.26232 9.06363 1.24139 9 1.24139C8.93637 1.24139 8.87439 1.26232 8.82301 1.30116L1.02345 7.19771C0.985599 7.22633 0.954756 7.26373 0.933399 7.30691C0.912041 7.35009 0.900764 7.39785 0.900472 7.44635C0.900181 7.49485 0.910882 7.54275 0.931719 7.5862C0.952556 7.62965 0.982947 7.66745 1.02045 7.69655L2.10039 8.53448V14.2759C1.78226 14.2762 1.47726 14.4071 1.25231 14.6399C1.02735 14.8726 0.900818 15.1881 0.900461 15.5172C0.900461 15.5302 0.900686 15.5432 0.901136 15.5563C0.618136 15.6316 0.371411 15.8111 0.207254 16.0612C0.0430969 16.3113 -0.027211 16.6148 0.00952183 16.9147C0.0462547 17.2146 0.187504 17.4903 0.406767 17.6901C0.626031 17.8899 0.908239 18.0001 1.20044 18H16.7996C17.0918 18.0001 17.374 17.8899 17.5932 17.6901C17.8125 17.4903 17.9537 17.2146 17.9905 16.9147C18.0272 16.6148 17.9569 16.3113 17.7927 16.0612C17.6286 15.8111 17.3819 15.6316 17.0989 15.5563ZM11.6998 0.62069H14.0997V1.24138H11.6998V0.62069ZM11.9998 3.41379V1.86207H13.7997V4.79599L11.9714 3.41379H11.9998ZM9 1.93609L16.2954 7.45153L15.5969 7.99351L9.17647 3.1628C9.12519 3.12421 9.06341 3.10343 9 3.10343C8.93659 3.10343 8.87481 3.12421 8.82353 3.1628L2.40311 7.99351L1.7046 7.45153L9 1.93609ZM0.600478 16.7586C0.600644 16.5957 0.662678 16.4393 0.773215 16.3232C0.883752 16.2071 1.03395 16.1406 1.19144 16.1379H1.19216C1.20749 16.1401 1.22283 16.142 1.23847 16.1431C1.28818 16.1463 1.33789 16.1367 1.38311 16.1151C1.42833 16.0935 1.46765 16.0606 1.4975 16.0194C1.52735 15.9781 1.54681 15.9298 1.55411 15.8788C1.56141 15.8279 1.55632 15.7758 1.53931 15.7274C1.51449 15.6603 1.50132 15.5891 1.50043 15.5172C1.50062 15.3527 1.56389 15.1949 1.67636 15.0786C1.78884 14.9622 1.94133 14.8967 2.10039 14.8966V17.3793H1.20044C1.04138 17.3791 0.888887 17.3137 0.776412 17.1973C0.663938 17.0809 0.600666 16.9232 0.600478 16.7586ZM13.4997 17.3793H9.89995V10.5517H13.4997V17.3793ZM14.0997 17.3793V10.2414C14.0997 10.1591 14.0681 10.0801 14.0118 10.0219C13.9556 9.96373 13.8793 9.93103 13.7997 9.93103H9.59997C9.5204 9.93103 9.4441 9.96373 9.38785 10.0219C9.33159 10.0801 9.29998 10.1591 9.29998 10.2414V17.3793H2.70036V8.53735L9 3.79753L15.2996 8.53735V17.3793H14.0997ZM16.7996 17.3793H15.8996V14.8966C16.0587 14.8967 16.2112 14.9622 16.3236 15.0786C16.4361 15.1949 16.4994 15.3527 16.4996 15.5172C16.4987 15.5892 16.4855 15.6604 16.4607 15.7275C16.4437 15.776 16.4386 15.828 16.4459 15.879C16.4532 15.93 16.4726 15.9783 16.5025 16.0195C16.5324 16.0608 16.5717 16.0937 16.6169 16.1153C16.6621 16.1369 16.7118 16.1465 16.7615 16.1432C16.7772 16.1422 16.7925 16.1403 16.8078 16.1381H16.8086C16.9677 16.1393 17.1198 16.2059 17.2315 16.3232C17.3431 16.4404 17.4052 16.5988 17.404 16.7634C17.4028 16.928 17.3385 17.0854 17.2251 17.201C17.1118 17.3165 16.9587 17.3807 16.7996 17.3795V17.3793Z"></path>
+                  <path d="M7.79919 9.93164H4.1994C4.11984 9.93164 4.04353 9.96434 3.98728 10.0225C3.93102 10.0807 3.89941 10.1597 3.89941 10.242V14.5868C3.89941 14.6691 3.93102 14.7481 3.98728 14.8063C4.04353 14.8645 4.11984 14.8972 4.1994 14.8972H7.79919C7.87875 14.8972 7.95505 14.8645 8.01131 14.8063C8.06757 14.7481 8.09917 14.6691 8.09917 14.5868V10.242C8.09917 10.1597 8.06757 10.0807 8.01131 10.0225C7.95505 9.96434 7.87875 9.93164 7.79919 9.93164ZM7.49921 12.1041H6.29928V10.5523H7.49921V12.1041ZM5.69931 10.5523V12.1041H4.49938V10.5523H5.69931ZM4.49938 12.7247H5.69931V14.2765H4.49938V12.7247ZM6.29928 14.2765V12.7247H7.49921V14.2765H6.29928Z"></path>
+                  <path d="M11.0783 13.774C11.1417 13.6157 11.069 13.4342 10.9159 13.3686C10.7629 13.303 10.5874 13.3782 10.524 13.5365C10.4606 13.6949 10.5333 13.8764 10.6863 13.942C10.8394 14.0076 11.0149 13.9324 11.0783 13.774Z"></path>
+                </g>
+              </svg>
+              <span class="relative xs:text-[2vw] md:text-[1.3vw] z-10">Add Property</span>
+            </a>
+          </div>
+          <div class="w-full bg-[#F6EFF7] py-8 px-5 rounded-lg">
+            <h3 class="text-xl font-semibold">Book a Viewing</h3>
+            <p class="text-gray-500 text-sm mt-3 leading-[25px]">You'll find tasteful decor, modern lighting fixtures and high-quality finishes.</p>
+            <form action="/booking/<%= infoId %>" method="post" class="flex flex-col gap-2 py-3">
+              <div class="flex flex-col gap-1">
+                <label for="">Full Name*</label>
+                <input class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" type="text" name="name" required placeholder="Ex - Rockey Jhon">
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Email*</label>
+                <input class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" type="email" placeholder="info@gmail.com" required name="email" id="">
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Phone Number*</label>
+                <input class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" type="tel" placeholder="+9235485374" required name="phoneNum" id="">
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Property Full Address*</label>
+                <input class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" name="propAddress" required placeholder="Ex - Bangladesh" type="text"></input>
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Preferred Viewing Date & Time*</label>
+                <input type="date" class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" name="dateTime" required placeholder="From date & time" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Message*</label>
+                <textarea class="py-3 px-5 bg-white outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" name="message" cols="30" rows="6" required placeholder="Type Here"></textarea>
+              </div>
+              <label for="agree" class="flex gap-2 text-sm py-3">
+                <input type="checkbox" value="By submtting of this form I agree to terms of conditions" name="agreement" id="agree">
+                By submtting of this form I agree to terms of conditions
+              </label>
+              <div class="mx-auto">
+                <button onclick="successData('<%= propertyData._id %>')" id="addP" class="flex relative gap-2 xs:px-3 md:px-5 bg-black rounded-lg xs:py-[1vw] md:py-[0.7vw] text-black hover:text-white items-center transition-all duration-500 fill-black hover:fill-white font-semibold overflow-hidden">
+                  <svg class="relative z-10 w-[2vw]" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    <g mask="url(#mask0_485_1352)">
+                      <path d="M17.0989 15.5563C17.0993 15.5432 17.0995 15.5302 17.0995 15.5172C17.0992 15.1881 16.9726 14.8726 16.7477 14.6399C16.5227 14.4071 16.2177 14.2762 15.8996 14.2759V8.53448L16.9795 7.69655C17.0171 7.66745 17.0474 7.62965 17.0683 7.5862C17.0891 7.54275 17.0998 7.49485 17.0995 7.44635C17.0992 7.39785 17.088 7.35009 17.0666 7.30691C17.0452 7.26373 17.0144 7.22633 16.9765 7.19771L14.3997 5.24956V1.86207C14.4793 1.86207 14.5556 1.82937 14.6118 1.77117C14.6681 1.71297 14.6997 1.63403 14.6997 1.55172V0.310345C14.6997 0.228036 14.6681 0.149099 14.6118 0.0908979C14.5556 0.0326969 14.4793 0 14.3997 0H11.3999C11.3203 0 11.244 0.0326969 11.1877 0.0908979C11.1315 0.149099 11.0999 0.228036 11.0999 0.310345V1.55172C11.0999 1.63403 11.1315 1.71297 11.1877 1.77117C11.244 1.82937 11.3203 1.86207 11.3999 1.86207V2.98168L9.17699 1.30116C9.12561 1.26232 9.06363 1.24139 9 1.24139C8.93637 1.24139 8.87439 1.26232 8.82301 1.30116L1.02345 7.19771C0.985599 7.22633 0.954756 7.26373 0.933399 7.30691C0.912041 7.35009 0.900764 7.39785 0.900472 7.44635C0.900181 7.49485 0.910882 7.54275 0.931719 7.5862C0.952556 7.62965 0.982947 7.66745 1.02045 7.69655L2.10039 8.53448V14.2759C1.78226 14.2762 1.47726 14.4071 1.25231 14.6399C1.02735 14.8726 0.900818 15.1881 0.900461 15.5172C0.900461 15.5302 0.900686 15.5432 0.901136 15.5563C0.618136 15.6316 0.371411 15.8111 0.207254 16.0612C0.0430969 16.3113 -0.027211 16.6148 0.00952183 16.9147C0.0462547 17.2146 0.187504 17.4903 0.406767 17.6901C0.626031 17.8899 0.908239 18.0001 1.20044 18H16.7996C17.0918 18.0001 17.374 17.8899 17.5932 17.6901C17.8125 17.4903 17.9537 17.2146 17.9905 16.9147C18.0272 16.6148 17.9569 16.3113 17.7927 16.0612C17.6286 15.8111 17.3819 15.6316 17.0989 15.5563ZM11.6998 0.62069H14.0997V1.24138H11.6998V0.62069ZM11.9998 3.41379V1.86207H13.7997V4.79599L11.9714 3.41379H11.9998ZM9 1.93609L16.2954 7.45153L15.5969 7.99351L9.17647 3.1628C9.12519 3.12421 9.06341 3.10343 9 3.10343C8.93659 3.10343 8.87481 3.12421 8.82353 3.1628L2.40311 7.99351L1.7046 7.45153L9 1.93609ZM0.600478 16.7586C0.600644 16.5957 0.662678 16.4393 0.773215 16.3232C0.883752 16.2071 1.03395 16.1406 1.19144 16.1379H1.19216C1.20749 16.1401 1.22283 16.142 1.23847 16.1431C1.28818 16.1463 1.33789 16.1367 1.38311 16.1151C1.42833 16.0935 1.46765 16.0606 1.4975 16.0194C1.52735 15.9781 1.54681 15.9298 1.55411 15.8788C1.56141 15.8279 1.55632 15.7758 1.53931 15.7274C1.51449 15.6603 1.50132 15.5891 1.50043 15.5172C1.50062 15.3527 1.56389 15.1949 1.67636 15.0786C1.78884 14.9622 1.94133 14.8967 2.10039 14.8966V17.3793H1.20044C1.04138 17.3791 0.888887 17.3137 0.776412 17.1973C0.663938 17.0809 0.600666 16.9232 0.600478 16.7586ZM13.4997 17.3793H9.89995V10.5517H13.4997V17.3793ZM14.0997 17.3793V10.2414C14.0997 10.1591 14.0681 10.0801 14.0118 10.0219C13.9556 9.96373 13.8793 9.93103 13.7997 9.93103H9.59997C9.5204 9.93103 9.4441 9.96373 9.38785 10.0219C9.33159 10.0801 9.29998 10.1591 9.29998 10.2414V17.3793H2.70036V8.53735L9 3.79753L15.2996 8.53735V17.3793H14.0997ZM16.7996 17.3793H15.8996V14.8966C16.0587 14.8967 16.2112 14.9622 16.3236 15.0786C16.4361 15.1949 16.4994 15.3527 16.4996 15.5172C16.4987 15.5892 16.4855 15.6604 16.4607 15.7275C16.4437 15.776 16.4386 15.828 16.4459 15.879C16.4532 15.93 16.4726 15.9783 16.5025 16.0195C16.5324 16.0608 16.5717 16.0937 16.6169 16.1153C16.6621 16.1369 16.7118 16.1465 16.7615 16.1432C16.7772 16.1422 16.7925 16.1403 16.8078 16.1381H16.8086C16.9677 16.1393 17.1198 16.2059 17.2315 16.3232C17.3431 16.4404 17.4052 16.5988 17.404 16.7634C17.4028 16.928 17.3385 17.0854 17.2251 17.201C17.1118 17.3165 16.9587 17.3807 16.7996 17.3795V17.3793Z"></path>
+                      <path d="M7.79919 9.93164H4.1994C4.11984 9.93164 4.04353 9.96434 3.98728 10.0225C3.93102 10.0807 3.89941 10.1597 3.89941 10.242V14.5868C3.89941 14.6691 3.93102 14.7481 3.98728 14.8063C4.04353 14.8645 4.11984 14.8972 4.1994 14.8972H7.79919C7.87875 14.8972 7.95505 14.8645 8.01131 14.8063C8.06757 14.7481 8.09917 14.6691 8.09917 14.5868V10.242C8.09917 10.1597 8.06757 10.0807 8.01131 10.0225C7.95505 9.96434 7.87875 9.93164 7.79919 9.93164ZM7.49921 12.1041H6.29928V10.5523H7.49921V12.1041ZM5.69931 10.5523V12.1041H4.49938V10.5523H5.69931ZM4.49938 12.7247H5.69931V14.2765H4.49938V12.7247ZM6.29928 14.2765V12.7247H7.49921V14.2765H6.29928Z"></path>
+                      <path d="M11.0783 13.774C11.1417 13.6157 11.069 13.4342 10.9159 13.3686C10.7629 13.303 10.5874 13.3782 10.524 13.5365C10.4606 13.6949 10.5333 13.8764 10.6863 13.942C10.8394 14.0076 11.0149 13.9324 11.0783 13.774Z"></path>
+                    </g>
+                  </svg>
+                  <span class="relative xs:text-[2vw] md:text-[1.3vw] z-10">Submit Now</span>
+                </button>
+              </div>
+            </form>
+            <% if (message.length > 0) { %>
+            <script>
+              Toastify({
+                text: "<%= message %>",
+                duration: 3000,
+                gravity: "top",
+                position: 'right',
+                backgroundColor: "red",
+              }).showToast();
+            </script>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="max-w-[1300px] px-5 mx-auto">
+      <%- include("../common/trustedPartners.ejs") %>
+    </div>
+  </section>
+  <section>
+    <%- include("../common/insights.ejs") %>
+  </section>
+  <%- include("../common/footer.ejs") %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/propertyInfo.js"></script>
+</body>
+
+</html>

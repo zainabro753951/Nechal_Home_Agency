@@ -1,0 +1,55 @@
+.hero2 {
+  background-image: url("/imgs/header/bannar2-bg3.png");
+}
+#addP::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  top: -200%;
+  left: 50%;
+  transform: rotate(50deg);
+  background-color: #efb93f;
+  transition: all 0.5s ease;
+}
+#addP::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  top: -100%;
+  left: -15%;
+  transform: rotate(50deg);
+  background-color: #efb93f;
+  transition: all 0.5s ease;
+}
+#addP:hover::after {
+  top: -250%;
+  left: 100%;
+}
+#addP:hover::before {
+  top: -50%;
+  left: -60%;
+}
+#menu::-webkit-scrollbar {
+  display: none;
+}
+#arrowRapper:hover #arrowbtn {
+  background-color: #f3cb6f;
+}
+#arrowRapper:hover #arrowbtn #arrows {
+  transform: rotate(0deg);
+  fill: black;
+}
+#hoverEl:hover {
+  transform: rotate(0deg);
+  transform: translateY(-50%);
+}
+#hoverEl:hover #rotate2 {
+  transform: rotate(0deg);
+}
+#hover:hover #hoverable {
+  background: #efb93f;
+}
+
+/*  Faqs */

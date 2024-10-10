@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nechal Home Agency - Login to Your Account</title>
+  <meta name="description" content="Access your Nechal Home Agency account to manage your properties, view listings, and stay updated. Log in now for a seamless experience!">
+  <%- include("../common/config.ejs") %>
+
+</head>
+
+<body>
+  <section>
+    <div class="modal-content h-screen grid items-center md:place-content-center gap-5 xs:grid-cols-1 md:grid-cols-2 text-black bg-white rounded-lg max-w-[1300px] mx-auto h-screen">
+      <div class="relative h-full">
+        <img class="w-full xs:h-[50vh] md:h-screen object-cover" src="/imgs/login/login-img.png" alt="">
+        <img class="absolute left-10 top-10" src="/imgs/home2-logo.svg" alt="">
+      </div>
+      <div class="sm:px-16 xs:px-3">
+        <div>
+          <div class="text-center ">
+            <h2 class="text-3xl mb-3 font-semibold">Login</h2>
+            <p class="text-gray-500">Don't Have an account <a id="signup" href="/signup" class="text-black font-semibold transition-all cursor-pointer duration-500 hover:text-dgolden">Sign up</a></p>
+          </div>
+          <form class="flex flex-col gap-3 py-7 w-full" action="/login" method="post">
+            <label for="">Enter your email address*</label>
+            <input class="py-3 px-5 bg-gray-100 outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" type="email" name="email" placeholder="Email Address">
+            <label for="">Password*</label>
+            <input class="py-3 px-5 bg-gray-100 outline-none w-full rounded-md transition-all duration-500 focus:border-dgolden border-2 border-transparent" type="password" name="password" placeholder="Password*">
+            <div class="text-red-800 flex gap-3">
+            </div>
+            <input class="py-3 px-5 outline-none w-full rounded-md transition-all duration-500 bg-black text-white text-xl hover:bg-dgolden mt-2" type="submit" id="submit" value="Log In">
+          </form>
+          <% if (errorMessage) { %>
+          <script>
+            Toastify({
+              text: "<%= errorMessage %>",
+              duration: 3000,
+              gravity: "top",
+              position: 'right',
+              backgroundColor: "red",
+            }).showToast();
+          </script>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const message = localStorage.getItem('errorMessage');
+    if (message) {
+      Toastify({
+        text: message,
+        duration: 3000,
+        gravity: "top",
+        position: 'right',
+        backgroundColor: "red",
+      }).showToast();
+
+      // Clear the message after displaying
+      localStorage.removeItem('errorMessage');
+    }
+  </script>
+  <script src="/js/forum.js"></script>
+</body>
+
+</html>
