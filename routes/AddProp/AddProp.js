@@ -5,14 +5,13 @@ const upload = require("../../multerconfig");
 const { isAuthenticated } = require("../../middlewares/auth");
 
 router.get("/addProperty", cache("5 minutes"), (req, res) => {
-  let phoneRes = req.query.message;
-  res.render("addProperty", { phoneRes });
+  let successAdd = req.query.successAdd;
+  res.render("addProperty", { successAdd });
 });
 
 router.post(
   "/submit",
   isAuthenticated,
-  cache("1 minutes"),
   upload.fields([{ name: "image" }, { name: "profileImage" }]),
   async (req, res) => {
     let images = req.files;
@@ -67,7 +66,8 @@ router.post(
       },
     });
     let result = await newData.save();
-    res.redirect("/addProperty");
+    let successAdd = "Your Propperty Successfully Added";
+    return res.redirect(`/addProperty?successAdd=${successAdd}`);
   }
 );
 

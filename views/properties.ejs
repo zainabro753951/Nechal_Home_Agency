@@ -26,6 +26,10 @@
     </nav>
     <nav class="flex justify-between px-6 py-[2vw] items-center">
       <a class="xs:text-[2vw] md:text-[1.6vw]" href="/home">Home</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/forSale">For Sale</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/forRent">For Rent</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="/properties">Property</a>
+      <a class="transition-all xs:text-[2vw] md:text-[1.3vw] duration-500 hover:text-[#EFB93F]" href="#">Contact us</a>
       <a id="addP" href="/addProperty" class="flex relative gap-2 xs:px-3 md:px-5 bg-black rounded-lg xs:py-[1vw] md:py-[0.7vw] text-black hover:text-white items-center transition-all duration-500 fill-black hover:fill-white font-semibold overflow-hidden">
         <svg class="relative z-10 w-[2vw]" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
           <g mask="url(#mask0_485_1352)">
@@ -60,7 +64,10 @@
             <img class="w-full h-full object-cover" src="<%= items.image.imgFilepath %>" alt="<%= items.image.imgFilename %>">
           </div>
           <div class="px-2">
-            <h3><%= items.country %></h3>
+            <div class="flex justify-between">
+              <h3><%= items.country %></h3>
+              <h2 class="font-semibold"><%= items.PropertyStatus %></h2>
+            </div>
             <h3 class="my-1 md:text-xl xs:text-lg font-semibold"><%= items.propertyName %></h3>
             <div id="bedsInfo" class="flex gap-2 flex-wrap">
               <div class=" flex gap-3">

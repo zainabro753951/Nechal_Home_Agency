@@ -188,7 +188,7 @@
             <h3 class="text-lg font-semibold"><%= propertyData.fullName %></h3>
             <h4 class="text-gray-500 font-medium text-sm pb-3 "><%= propertyData.desination %></h4>
             <div class="w-full h-1 mb-2 bg-dgolden rounded-[50%]"></div>
-            <a class="transition-all duration-500 hover:text-dgolden" href="#">View Listing</a>
+            <a class="transition-all duration-500 hover:text-dgolden" href="/propertyinfo/<%= propertyData._id %>">View Listing</a>
             <div class="my-8 bg-white w-full p-5 flex flex-col gap-2 rounded-lg">
               <a href="https://wa.me/<%= propertyData.phoneNum %>" class="flex gap-3 items-center">
                 <i class="bx bxl-whatsapp text-3xl text-[#00D277]"></i>
@@ -255,15 +255,16 @@
                 </button>
               </div>
             </form>
-            <% if (message.length > 0) { %>
+            <% if (bookingSuccess) { %>
             <script>
               Toastify({
-                text: "<%= message %>",
+                text: "<%= bookingSuccess %>",
                 duration: 3000,
                 gravity: "top",
                 position: 'right',
-                backgroundColor: "red",
+                backgroundColor: "green",
               }).showToast();
+              window.location.href('/addProperty')
             </script>
             <% } %>
           </div>

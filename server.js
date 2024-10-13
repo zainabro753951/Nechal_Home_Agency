@@ -39,6 +39,12 @@ app.use(
 );
 app.use(flash());
 
+app.use((req, res, next) => {
+  res.locals.message = req.flash("message");
+  res.locals.error_msg = req.flash("error_msg");
+  next();
+});
+
 // Routes here
 app.use(HomeRoutes);
 app.use(signUp);
