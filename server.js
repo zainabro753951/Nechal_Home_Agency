@@ -17,6 +17,8 @@ const forRent = require("./routes/ForRent/forRent");
 const forSale = require("./routes/forSale/forSale");
 const dashboard = require("./routes/dashboard/dashboard");
 const propertyInfo = require("./routes/PropertyInfo/PropertyInfo");
+const contact = require("./routes/contact/contact");
+const newly_listing = require("./routes/NewlyListing/newly_listing");
 const logout = require("./routes/logout/logout");
 const PORT = process.env.PORT || 5000;
 // middleWares
@@ -59,7 +61,10 @@ app.use(FAQs);
 app.use(propertyInfo);
 app.use(booking);
 app.use(dashboard);
+app.use(contact);
+app.use(newly_listing);
 app.use(logout);
+
 // listning
 app.listen(PORT, () => {
   console.log(`listning on http://localhost:${PORT}`);

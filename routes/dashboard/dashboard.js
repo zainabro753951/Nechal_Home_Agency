@@ -19,6 +19,7 @@ router.get("/dashboard", isAuthenticated, async (req, res) => {
 
 router.delete("/deleteProducts/:propId", async (req, res) => {
   let deleteddata = await homeAgencyModel.findByIdAndDelete(req.params.propId);
+  res.redirect("/dashboard");
 });
 
 module.exports = router;

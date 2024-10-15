@@ -1,8 +1,13 @@
 async function deleteProduct(id) {
   let deletedData = await fetch(`/deleteProducts/${id}`, {
-    method: "delete",
+    method: "DELETE",
   });
+
+  console.log(deletedData); // Check the response
+
   if (deletedData.ok) {
-    location.reload();
+    window.location.reload();
+  } else {
+    console.error("Delete failed:", deletedData.statusText);
   }
 }

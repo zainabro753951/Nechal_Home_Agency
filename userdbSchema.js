@@ -71,4 +71,18 @@ let userBookingSchema = new mongoose.Schema({
 });
 let userBookingModel = users.model("bookings", userBookingSchema);
 
-module.exports = { userModel, userBookingModel, homeAgencyModel };
+let ContactUsSchema = new mongoose.Schema({
+  fullName: String,
+  email: String,
+  phoneNum: String,
+  subject: String,
+  message: String,
+});
+let contactUsModel = homeAgency.model("contact_reqs", ContactUsSchema);
+
+module.exports = {
+  userModel,
+  userBookingModel,
+  homeAgencyModel,
+  contactUsModel,
+};

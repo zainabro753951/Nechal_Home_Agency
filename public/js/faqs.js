@@ -1,7 +1,14 @@
 let faqs = document.querySelectorAll("#faqs");
 
 faqs.forEach((items) => {
+  let clutter = "closed";
   items.addEventListener("click", () => {
-    items.style.height = "100%";
+    if (clutter == "closed") {
+      items.style.height = "100%";
+      clutter = "open";
+    } else {
+      items.style.height = "48px";
+      clutter = "closed";
+    }
   });
 });
