@@ -17,7 +17,7 @@ router.get("/dashboard", isAuthenticated, async (req, res) => {
   res.render("dashboard", { Fname, Lname, countuserPropData, userPropData });
 });
 
-router.delete("/deleteProducts/:propId", async (req, res) => {
+router.delete("/deleteProducts/:propId", isAuthenticated, async (req, res) => {
   let deleteddata = await homeAgencyModel.findByIdAndDelete(req.params.propId);
   res.redirect("/dashboard");
 });

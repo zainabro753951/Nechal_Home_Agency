@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const { contactUsModel } = require("../../userdbSchema");
+const { isAuthenticated } = require("../../middlewares/auth");
 router.get("/contact", (req, res) => {
   res.render("contact");
 });
-router.post("/contact", async (req, res) => {
+router.post("/contact", isAuthenticated, async (req, res) => {
   let dataEntry = contactUsModel(req.body);
   let result = await dataEntry.save();
-  console.log(result);
   res.render("contact", { message: "Your Message Successfully sended" });
 });
 

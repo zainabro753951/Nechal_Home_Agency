@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const moment = require("moment");
+
 const { users, homeAgency } = require("./userdbConfig");
 let userSchema = new mongoose.Schema({
   Fname: String,
@@ -67,7 +69,7 @@ let userBookingSchema = new mongoose.Schema({
   dateTime: Date,
   message: String,
   agreement: String,
-  createdAt: { type: Date, default: Date.now },
+  createdAt: { type: Date, default: Date.now() },
 });
 let userBookingModel = users.model("bookings", userBookingSchema);
 

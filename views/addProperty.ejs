@@ -62,8 +62,8 @@
         <a href="/home">Home</a>
         <a class="md:block xs:hidden" href="/forSale">For Sale</a>
         <a class="md:block xs:hidden" href="/forRent">For Rent</a>
-        <a class="md:block xs:hidden" href="/addProperty">Property</a>
-        <a class="md:block xs:hidden" href="#">Contact us</a>
+        <a class="md:block xs:hidden" href="/properties">Property</a>
+        <a class="md:block xs:hidden" href="/contact">Contact us</a>
       </div>
       <a href="/profile" class="flex gap-2 items-center">
         <svg class=" transition-all duration-500 fill-[#EFB93F]" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -85,13 +85,13 @@
           <div class="md:col-span-2 xs:col-span-0 my-5 xs:p4 md:p-10 bg-[#FAF8FB] rounded-lg">
             <h2 class="text-xl font-semibold mb-3">Property Status</h2>
             <div class=" flex md:flex-row xs:flex-col items-center gap-5 py-5">
-              <div class="flex items-center gap-2 py-2 px-4 bg-white rounded-md" class=" flex gap-2">
+              <div class="flex items-center cursor-pointer gap-2 py-2 px-4 bg-white rounded-md" class=" flex gap-2">
                 <input type="radio" name="PropertyStatus" value="For Sale" id="forsale">
-                <label for="forsale">For Sale</label>
+                <label for="forsale" class="cursor-pointer">For Sale</label>
               </div>
-              <div class="flex items-center gap-2 py-2 px-4 bg-white rounded-md">
+              <div class="flex items-center cursor-pointer gap-2 py-2 px-4 bg-white rounded-md">
                 <input type="radio" name="PropertyStatus" value="For Rent" id="forrent">
-                <label for="forrent">For Rent</label>
+                <label for="forrent" class="cursor-pointer">For Rent</label>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 gap-5">
@@ -312,37 +312,37 @@
             <div class="w-full">
               <h4 class="font-semibold">Other Features</h4>
               <div class="grid xs:grid-cols-2 md:grid-cols-3 gap-2 py-3">
-                <label for="fireplace">
+                <label for="fireplace" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Fireplace" id="fireplace"> FirePlace
                 </label>
-                <label for="alaram">
+                <label for="alaram" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Alaram System" id="alaram"> Alaram System
                 </label>
-                <label for="pool">
+                <label for="pool" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Swimming Pool" id="pool"> Swimming Pool
                 </label>
-                <label for="air">
+                <label for="air" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Air Condition" id="air"> Air Condition
                 </label>
-                <label for="play">
+                <label for="play" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Play Ground" id="play"> Play Ground
                 </label>
-                <label for="secure">
+                <label for="secure" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Secure Systems" id="secure"> Secure Systems
                 </label>
-                <label for="camera">
+                <label for="camera" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="CCTV Cameras" id="camera"> CCTV Cameras
                 </label>
-                <label for="garage">
+                <label for="garage" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Garage" id="garage"> Garage
                 </label>
-                <label for="club">
+                <label for="club" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Club House" id="club"> Club House
                 </label>
-                <label for="fitness">
+                <label for="fitness" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Fitness Club" id="fitness"> Fitness Club
                 </label>
-                <label for="park">
+                <label for="park" class="select-none cursor-pointer">
                   <input class="cursor-pointer" type="checkbox" name="otherFeatures" value="Park" id="park"> Park
                 </label>
               </div>
@@ -486,7 +486,24 @@
             position: 'right',
             backgroundColor: "green",
           }).showToast();
-          window.location.href('/addProperty')
+          setTimeout(() => {
+            window.location.href = "http://localhost:5000/addProperty"
+          }, 1500)
+        </script>
+        <% } %>
+        <% if (message) { %>
+        <script>
+          Toastify({
+            text: "<%= message %>",
+            Text: "white",
+            duration: 3000,
+            gravity: "top",
+            position: 'right',
+            backgroundColor: "orange",
+          }).showToast();
+          setTimeout(() => {
+            window.location.href = "http://localhost:5000/addProperty"
+          }, 2500)
         </script>
         <% } %>
     </section>

@@ -6,16 +6,22 @@ const userPicUploads = require("../../userMulter");
 
 // routes
 router.get("/signup", isNotAuthenticated, (req, res) => {
+  let phoneErr = req.query.phoneErr;
   let message = null;
   let password = null;
-  res.render("signup", { message, password });
+  res.render("signup", { message, password, phoneErr });
 });
 
 router.post(
   "/signup",
+  isNotAuthenticated,
   userPicUploads.single("profileImage"),
   async (req, res) => {
     let { Fname, Lname, email, phoneNum, password, confirmPass } = req.body;
+    if (!phoneNum.startsWith("+")) {
+      let phoneErr = "Your phone number must have country code";
+      return res.redirect(`/signup?phoneErr=${phoneErr}`);
+    }
     let filepath = req.file.path.slice(7);
 
     let profileImage = {
@@ -26,7 +32,8 @@ router.post(
     if (existingUser) {
       let message = "email is already registered";
       let password = null;
-      return res.render("signup", { message, password });
+      let phoneErr = req.query.phoneErr;
+      return res.render("signup", { message, password, phoneErr });
     }
     if (password == confirmPass) {
       try {
@@ -49,8 +56,9 @@ router.post(
       }
     } else {
       let password = "password does not match";
-      message = null;
-      return res.render("signup", { password, message });
+      let message = null;
+      let phoneErr = req.query.phoneErr;
+      return res.render("signup", { password, message, phoneErr });
     }
   }
 );

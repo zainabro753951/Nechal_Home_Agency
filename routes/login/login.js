@@ -14,7 +14,7 @@ let loginModel = database2.model("users", loginSchema);
 router.get("/", isNotAuthenticated, cache("5 minutes"), (req, res) => {
   res.render("login", { errorMessage: null });
 });
-router.post("/login", async (req, res) => {
+router.post("/login", isNotAuthenticated, async (req, res) => {
   let data = await loginModel.findOne({ email: req.body.email });
   if (data && (await bcrypt.compare(req.body.password, data.password))) {
     req.session.userId = data._id;

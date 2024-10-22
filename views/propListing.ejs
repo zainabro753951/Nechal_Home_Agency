@@ -1,0 +1,35 @@
+<div class="flex md:justify-between xs:justify-center items-center py-5">
+  <h3>Property Info</h3>
+  <div class="md:flex xs:hidden gap-32 ">
+    <h4>When Added </h4>
+    <h4>Action</h4>
+  </div>
+</div>
+<div class="md:px-5 flex flex-col gap-5">
+  <% userPropData.forEach((items) => { %>
+  <div class="flex gap-3 xs:border rounded-lg border-dgolden xs:p-3 md:p-5 items-center xs:flex-wrap lg:flex-nowrap xs:justify-center md:justify-between">
+    <div class="flex gap-5 md:items-center md:justify-between xs:flex-wrap lg:flex-nowrap">
+      <div class="xs:w-full md:w-fit">
+        <img class="md:w-[150px] xs:w-full object-cover h-[100px] rounded-lg" src="<%= items.image.imgFilepath %>" alt="">
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="flex gap-2 items-center">
+          <i class="fa-solid fa-location-dot"></i>
+          <h4><%= items.city %></h4>
+        </div>
+        <h2 class="text-xl font-semibold"><%= items.propertyName %></h2>
+        <div class="flex gap-2 items-center flex-wrap">
+          <img src="/imgs/dashboard/view-details-icon.svg" alt="">
+          <a href="/propertyinfo/<%= items._id %>">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-[12px]"><%= items.postedAt %></h2>
+    </div>
+    <div class="flex gap-5">
+      <i onclick="deleteProduct(`<%= items._id%>`)" class="fa-solid fa-trash"></i>
+    </div>
+  </div>
+  <%}) %>
+</div>

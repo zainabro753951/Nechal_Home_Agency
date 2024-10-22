@@ -4,9 +4,10 @@ const { homeAgencyModel } = require("../../userdbSchema");
 const upload = require("../../multerconfig");
 const { isAuthenticated } = require("../../middlewares/auth");
 
-router.get("/addProperty", cache("5 minutes"), (req, res) => {
+router.get("/addProperty", isAuthenticated, (req, res) => {
   let successAdd = req.query.successAdd;
-  res.render("addProperty", { successAdd });
+  let message = req.query.message;
+  res.render("addProperty", { successAdd, message });
 });
 
 router.post(
@@ -14,6 +15,11 @@ router.post(
   isAuthenticated,
   upload.fields([{ name: "image" }, { name: "profileImage" }]),
   async (req, res) => {
+    let phoneNumber = req.body.phoneNum;
+    if (!phoneNumber.startsWith("+")) {
+      let message = "Your phone number must have country code";
+      return res.redirect(`/addProperty?message=${message}`);
+    }
     let images = req.files;
     let { image, profileImage } = images;
     // imageflies
@@ -57,7 +63,7 @@ router.post(
       fullName: req.body.fullName,
       email: req.body.email,
       desination: req.body.desination,
-      phoneNum: req.body.phoneNum,
+      phoneNum: phoneNumber,
       facebookLink: req.body.facebookLink,
       twitterLink: req.body.twitterLink,
       profileImage: {
